@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Quiz</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4 w-100" style="max-width: 600px;">
+      <!-- Start Screen -->
+      <div id="start-screen" class="text-center">
+        <h2 class="mb-4 text-primary">Frontend Technologies Quiz</h2>
+        <select id="difficulty-selector" class="form-control mb-4">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start Quiz</button>
+      </div>
+
+      <!-- Quiz Screen -->
+      <div id="quiz-screen" class="hide">
+        <div class="d-flex justify-content-between mb-2">
+          <h5 id="question-number" class="text-info">Question 1</h5>
+          <p id="timer" class="text-danger font-weight-bold">Time Remaining: 30s</p>
+        </div>
+        <h4 id="question-text" class="mb-3"></h4>
+        <ul id="options-list" class="list-group mb-3"></ul>
+        <button id="next-btn" class="btn btn-success btn-block" onclick="nextQuestion()">Next</button>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result-screen" class="text-center hide">
+        <h3 class="text-success">Quiz Completed!</h3>
+        <p id="score-text" class="lead my-3"></p>
+        <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

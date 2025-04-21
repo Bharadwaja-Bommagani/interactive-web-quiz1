@@ -1,0 +1,35 @@
+body {
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  #options-list li {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #options-list li:hover {
+    background-color: #e9ecef;
+  }
+  
+  #options-list li.selected {
+    background-color: #d1ecf1;
+    font-weight: bold;
+    border: 1px solid #17a2b8;
+  }
+  
+  #timer {
+    font-size: 18px;
+    background-color: #f8d7da;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  
+  #question-number {
+    font-size: 18px;
+  }
+  
